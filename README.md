@@ -1,6 +1,7 @@
+# TESTING: NOT YET AVAILABLE TO CHAPTERS
 # Ladies Learning Code
 
-## Intro to Python
+## Programming with Python
 
 A full day introductory Python workshop.
 
