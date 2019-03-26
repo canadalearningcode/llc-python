@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Canada Learning Code</title>
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body class="en" data-duration="360">
+
+
+  <main>
+
+  <section class="slide" data-toc data-markdown>
+    <script type="text/template">
+      ##Instructor Notes
+
+      ##Ladies Learning Code: Intro to Browser Extensions with JavScript
+
+      <br>
+      ##Tips for Instructors
+
+      ###For the mentor huddle:
+
+      * Some mac users might fail to set up pycharm correctly with python 3. Before the workshop coach the mentors to handle this locally and not get side-tracked with the whole group explaining the python 2 vs. 3 differences
+      * Avoid getting side tracked by higher level discussions, especially in the data structures sections. In your mentor huddle, remind your mentors of this
+      * Instruct the mentors to keep feedback or suggestions on the content to themselves during the workshop and discuss with you during a break
+
+      ### For mentor introductions:
+
+      * Encourage the mentors to share how they use python (work? side projects?)
+      * If you like, share local python user groups or meetups
+
+      ### Content notes:
+
+      * When you introduce pycharm and IDEs, give them a tour around the tool, show them how to show/hide windows, file tabs, navigate the project explorer, etc. Take your time with this.
+      * Configure your font size in pycharm before the workshop. Ctrl + zoom does not work in pycharm, the setting is under File > Settings > Editor > Font. Increase the font size to at least 16
+      * Sometimes the green 'run' arrow in pycharm vanishes. That can mean the code in the py file is not valid. Learners can right click on the tab and run the file that way as well.
+      * Feel free to come up with and explore your own examples, especially in the data structures and functions sections.
+      * Code sections prefixed by `>>>` are meant to be run in the console.
+      * Indented code should be run in .py files
+      * If you are running out of time, you can run the individual exercises as code-alongs but there is no need to pressure yourself to get through all the content.
+
+    </script>
+  </section>
+
+  </main><!-- cls main section -->
+
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+</html>
