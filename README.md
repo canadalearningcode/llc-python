@@ -7,7 +7,7 @@ A full day introductory Python workshop.
 
 ## Quick Links
 
-Preview Slides: <a href="https://ladieslearningcode.github.io/llc-python">ladieslearningcode.github.io/llc-python/slides-en.html</a>
+Preview Slides: <a href="https://ladieslearningcode.github.io/llc-python/slides-en.html">ladieslearningcode.github.io/llc-python/slides-en.html</a>
 
 Instructor Notes: <a href="https://ladieslearningcode.github.io/llc-python/notes-en.html">ladieslearningcode.github.io/llc-python/notes-en.html</a>
 
