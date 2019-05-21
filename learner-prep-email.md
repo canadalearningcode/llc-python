@@ -4,31 +4,12 @@ We want to be able to dive right in and start learning at the workshop so there 
  
 HOW TO PREPARE:
 
-1. Install Python
+1. Download a PyCharm Educational Edition https://www.jetbrains.com/pycharm-educational/
+2. Download the Learner Materials here: https://github.com/ladieslearningcode/llc-python/archive/master.zip and unzip. 
+3. Look for installation instructions for windows/mac in the "installation" folder.
 
-Mac Users:
-
-Python is already installed on your computer. It comes with it! You can confirm by going to Applications > Utilities > Terminal. In the terminal window type "python --version" it should respond with something like “Python 2.7.6”.
-
-Windows Users:
-
-(if you are on your work computer, you may have to ask IT at work if you don't have administrator privileges)
-
-Go tohttps://www.python.org/downloads/windows/
-
-Click on "Python 2.7.x Windows Installer"
-
-Once the file is done downloading, double click on it.
-
-Follow the prompts (you do not have to change any default options).
-
-You will have to restart your computer once you're done.
-
-2. Download a good code editor - We’ll be using PyCharm Educational Editionhttps://www.jetbrains.com/pycharm-educational/
-
-3. Download the Learner Materials here: https://github.com/ladieslearningcode/llc-intro-to-python/archive/master.zip
  
-That's it! If you have any questions or comments there will be mentors available to help you on the day of the workshop. 
+If you have any questions or comments there will be mentors available to help you on the day of the workshop. 
 Looking forward to seeing you at the workshop!
 
 The Ladies Learning Code Team
