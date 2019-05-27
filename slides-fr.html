@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Femmes en programmation</title>
+  <!-- Ne modifiez pas slideshow.css : les diapositives CSS en ont besoin pour fonctionner.
+  https://github.com/LeaVerou/csss -->
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+
+  <!-- Styles propres au thème -->
+  <!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CQuicksand%7CPacifico%7COpen+Sans:400italic,400,300' rel='stylesheet' type='text/css' data-noprefix> -->
+  <link rel="stylesheet" href="framework/css/font-awesome.min.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs-themes/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/theme-llc.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Styles propres à l'atelier  -->
+  <link rel="stylesheet" href="framework/css/workshop.css" data-noprefix>
+
+  <!-- S'occupe des préfixes CSS3 -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+
+  <!-- Ouvre tous les liens dans une nouvelle fenêtre -->
+  <base target="_blank">
+</head>
+
+<!-- Barre de progression / durée : définissez la durée de la présentation avec « data-duration » en minutes. -->
+<body class="en" data-duration="360">
+
+  <!-- Diapositive d'intro -->
+  <header class="slide">
+    <img class="logo" src="framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
+    <h1>Bienvenue chez Femmes en programmation!</h1>
+
+    <div class="instructions">
+      <!-- Ajoutez les informations sur le Wi-Fi -->
+      <h2>Connexion</h2>
+      <p>Réseau : <br>
+      Mot de passe : </p>
+
+      <hr>
+
+      <h2>Téléchargez <br> et installez</h2>
+      <p>Fichiers d'apprentissage (dossier zip) : <a href="https://github.com/ladieslearningcode/llc-python/archive/master.zip">http://bit.ly/llc-python3</a></p>
+      <p>Consignes d'installation, selon le système :</p>
+      <ul>
+        <li><a href="installation/windows.html">Windows</a></li>
+        <li><a href="installation/mac.html">Mac</a></li>
+      </ul>
+    </div>
+    <!--<div class="sponsor">
+      <p>En partenariat avec
+      <img src="framework/img/telus-logo-white.svg" alt="Logo de Telus"></p>
+    </div>-->
+  </header>
+
+  <main>
+    <!-- Informations sur la formatrice -->
+    <section class="slide intro">
+      <img class="logo" src="framework/img/logo-llc-white.png" alt="Logo de Femmes en programmation">
+      <div class="info">
+        <br>
+        <h1 class="heading-bg">
+          <span>Aperçu de données avec le Python</span>
+        </h1>
+        <!-- À FAIRE : Remplir les informations sur la formatrice -->
+      <!--   <h2><span>avec</span> Nom de la formatrice</h2>
+
+      <img class="instructor-img" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="Nom de la formatricee">
+      <ul>
+        <li><i class="fa fa-envelope"></i><a href="mailto:">allo@courriel.com</a></li>
+        <li><i class="fa fa-desktop"></i><a href="#">monsite.com</a></li>
+        <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
+      </ul> -->
+        <!--<div class="sponsor">
+          <p>En partenariat avec</p>
+          <img src="framework/img/telus-logo-white.svg" alt="Logo de Telus">
+        </div>-->
+      </div>
+    </section>
+
+    <section class="slide project" data-markdown>
+      <script type="text/template">
+        # Projet du jour
+
+        Le Python est utile pour manipuler des données dans des domaines comme le commerce et les sciences. Toutefois, nous nous en servirons pour parler d'un sujet un peu plus amusant aujourd'hui.
+
+        Le [sondage canadien sur les ovnis](http://survey.canadianuforeport.com/) est produit par un organisme qui collecte des données sur les signalements d'ovnis à l'échelle du Canada depuis 1989.
+
+        Ils nous ont généreusement offert leurs données pour cet atelier. Merci!
+
+        ![Programmation ](framework/img/workshop/marvin.gif)
+
+
+
+      </script>
+    </section>
+
+    <section class="slide agenda" data-markdown>
+      <script type="text/template">
+      ## Ordre du jour
+
+      ###Matin
+
+      * Types
+      * Variables
+      * Expressions conditionnelles et logiques
+      * Listes
+      * Boucles
+
+      ###Après-midi
+
+      * Manipulation de fichiers
+      * Bibliothèques
+      * Dictionnaires
+      * Lecture de données à partir d'un fichier csv
+      * Projet final
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Le code des programmeuses
+
+        1. Soyez accueillantes et chaleureuses.
+        1. Choisissez bien vos mots et vos actions.
+        1. Respectez l'espace des autres durant les conversations.
+        1. Posez des questions.
+        1. Faites de votre mieux (et amusez-vous!).
+
+      </script>
+    </section>
+
+<!-- temp slide-->
+     <section class="slide" data-markdown>
+        <script type="text/template">
+          ## Le thème du mois d'août est...
+
+          # La population
+
+          La population est l'ensemble de personnes qui vivent au même endroit. Pourquoi certains endroits sont-ils plus peuplés que d'autres? Que se passe-t-il quand plusieurs personnes occupent le même espace?
+
+          **Explorez les villes du Canada et trouvez des tendances dans l'ensemble de données que nous utiliserons aujourd'hui.**
+
+          Partagez vos projets sur les réseaux sociaux avec le mot-clic #clcCode4Change. Pour obtenir plus d'informations, [cliquez ici](https://www.canadalearningcode.ca/code-can-change-the-world/).
+
+        </script>
+      </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Qu'est-ce que la programmation? Qu'est-ce que le code?
+
+        * Un programme commence par un fichier texte rempli de *commandes* à faire exécuter par l'ordinateur.
+        * Quand on parle « d'écrire du code », on parle de créer ces fichiers spéciaux.
+        * Les langages de programmation comme le Python nous permettent d'écrire ces commandes plus facilement.
+        * Les fichiers Python prennent l'extension `.py`.
+        * Il y a un autre type de fichier spécial qui traduit les commandes Python du fichier vers une autre forme que l'ordinateur peut utiliser.
+
+
+
+        ![Programmation ](framework/img/workshop/what_is_programming_fr.png)
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Langages de programmation
+
+        Les langages de programmation sont comme des outils qui nous permettent d'écrire des commandes à faire exécuter par l'ordinateur.
+
+        Par exemple, nous pouvons :
+
+        * Faire des opérations mathématiques
+        * Ouvrir un fichier sur l'ordinateur
+        * Chercher des données dans un dossier
+        * Télécharger des données d'un site Web
+        * Envoyer des courriels
+        * Zipper ou dézipper des dossiers
+        * Travailler avec une base de données
+        * ...entre autres!
+
+
+         Pour en savoir plus : https://docs.python.org/3.7/library/index.html
+
+
+      </script>
+    </section>
+
+
+
+    <section class="slide who-uses" data-markdown>
+      <script type="text/template">
+        ## Pourquoi utilise-t-on le Python?
+
+        * Analyse de données
+        * Informatique scientifique
+        * Scriptage
+        * Mise à l'essai
+        * Applications Web (Django, Flask)
+        * Certains de vos sites préférés utilisent le Python!
+        <!-- * Youtube, Reddit, Pinterest, Instagram, Dropbox, The Onion -->
+
+        ![](framework/img/workshop/logo-dropbox.png)
+        ![](framework/img/workshop/logo-instagram.png)
+        ![](framework/img/workshop/logo-pinterest.png)
+        ![](framework/img/workshop/logo-youtube.png)
+        ![](framework/img/workshop/logo-theonion.png)
+
+
+        ### Pourquoi nous sommes fans du Python
+
+        *   Gratuit!
+        *   Langage de programmation libre
+        *   Le code fonctionne, peu importe là où il est exécuté
+        *   Super communauté
+        *   La syntaxe ressemble à l'anglais
+        *   Les erreurs ont du sens, alors le code est facile à déboguer
+        *   Il s'agit du 4e langage de programmation le plus populaire selon le [Sondage de Stack Overflow 2019](https://insights.stackoverflow.com/survey/2019)
+
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        ![Trop fan!](framework/img/workshop/fangirling.gif) <!-- .element: style="width: 60%" -->
+      </script>
+    </section>
+
+
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        # On commence!
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        ## Environnements IDE PyCharm <br>(Integrated Development Environments)
+
+        Utilisez les environnements IDE pour écrire du code rapidement en minimisant vos erreurs.
+        <br><br>
+        ![Utilise la force!](framework/img/workshop/use_the_force.gif) <!-- .element: style="width: 60%" -->
+      </script>
+    </section>
+
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        ## Configurez vos fichiers de projet
+
+        Ouvrez PyCharm et sélectionnez **Open**.
+        Naviguez vers le dossier **llc-python-master-fr** et sélectionnez **Choose**.
+
+        ![](framework/img/workshop/pycharm-project1.png)
+
+
+        Les fichiers de projet contenus à l'intérieur du dossier s'afficheront dans la fenêtre Project Tool. Sélectionnez les flèches pour ouvrir les dossiers qui se trouvent à l'intérieur. Aujourd'hui, vous utiliserez les fichiers du dossier **exercices**.
+
+        Les corrigés sont dans le dossier **référence**.
+
+        Les autres dossiers sont essentiels pour faire fonctionner les diapositives que vous lisez en ce moment; ne les modifiez pas!
+
+        ![](framework/img/workshop/pycharm-project3.png)
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Exécuter le code Python dans PyCharm
+
+        La console, qui est comprise dans PyCharm, est un outil interactif qui sert à essayer et à déboguer du code. Ouvrons la console :
+
+        ![Outils, console Python](./framework/img/workshop/open-console1.png)
+
+        La console s'affichera en bas de l'application. Tapez le code (les instructions) après le symbole vert `>>>`. Ce symbole représente en fait un espace après lequel vous pouvez taper votre code. Vous n'avez donc pas besoin de taper d'espace tout de suite après!
+
+        ![La console Python dans PyCharm](./framework/img/workshop/open-console2.png)
+
+        **Truc de pro!** Vous pouvez aussi ouvrir et fermer la console en sélectionnant l'icône dans le coin inférieur gauche de PyCharm.
+      </script>
+    </section>
+
+<!-- -------------------- -->
+<!-- Premières étapes -->
+<!-- -------------------- -->
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Le Python fait des maths
+
+        Dans la console, après le `>>>`, essayez les exemples suivants :
+
+        La commande que vous tapez après le `>>>` est *évaluée* et la console retourne une valeur.
+
+        ```
+        >>> 2 + 2
+        4
+        ```
+
+        ```
+        >>> 2 * 15
+        30
+        ```
+
+        ```
+        >>> 1 / 2
+        0.5
+        ```
+
+        ```
+        >>> 2 ** 3
+        8
+        ```
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Types de données
+
+        Dans l'exemple précédent, nous avons utilisé le type de nombre **entier** (integer), mais il y en a plusieurs autres.
+
+        * Nombres entiers (« integer » en anglais, `int`)
+        * Nombres décimaux (nombre avec des *points* en anglais, `float`)
+        * Chaîne (des mots, des phrases et du texte, « string » en anglais, `str`)
+        * Booléens (expressions vraies ou fausses, `True`, `False`)
+        * [Et plus encore!](http://www.diveintopython3.net/native-datatypes.html)
+
+        Pour afficher le type, utilisez `type()` et une valeur de données à l'intérieur des parenthèses.
+
+        ```
+        >>> type("salut")
+        <class 'str'>
+
+        >>> type(42)
+        <class 'int'>
+
+        >>> type(3.14159)
+        <class 'float'>
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Impression
+
+        La **fonction** `print()` (nous y reviendrons plus tard) affiche ou « imprime » des données à l'écran.
+
+        Remarquez bien la syntaxe du code dans les exemples suivants. Ajoutez des guillemets anglais **"** lorsque vous utilisez une *chaîne* comme type de données.
+
+        ```
+        >>> print("Hello World!")
+        Hello World!
+        ```
+
+        ```
+        >>> print(2 + 2)
+        4
+        ```
+
+        ```
+        >>> print("2 + 2")
+        2 + 2
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Concaténation
+        La **concaténation** est l'action d'enchaîner plusieurs chaînes pour créer une seule chaîne.
+
+        ```python
+        >>> print("Hello " + "World!")
+        Hello World!
+        ```
+
+        Enchaînement de plus de deux chaînes :
+
+        ```python
+        >>> print("Salut " + "aux " + "femmes " + "en " + "programmation!")
+        Salut aux femmes en programmation!
+        ```
+
+      </script>
+    </section>
+
+
+<!-- -------------------- -->
+<!--Variables-->
+<!-- -------------------- -->
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Variables
+
+        * Elles ont utilisées pour stocker une valeur afin que nous puissions la réutiliser ailleurs.
+        * Les variables stockent des données dans la mémoire de l'ordinateur. Le **nom de variable** sert à récupérer les valeurs.
+
+
+        ![Variables](./framework/img/workshop/variables_fr.png)
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Variables (suite)
+
+         Utilisez le symbole égal (`=`) pour **assigner** une valeur à une variable.
+
+        ```python
+        >>> x = 5
+        >>> print(x)
+        5
+        ```
+        Le Python peut faire des maths avec les variables :
+        ```python
+        >>> x = 5
+        >>> y = 4
+        >>> x * y
+        20
+        ```
+        Il est possible de stocker presque n'importe quoi dans une variable, même une chaîne :
+        ```python
+        >>> animal = "python"
+        >>> print("Mon animal préféré est le " + animal)
+        Mon animal préféré est le python
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Reassigner les variables
+
+        Les variables peuvent être modifiées après la déclaration initiale. Pour ce faire, il faut les « réassigner ».
+
+        #### chaînes
+
+        ```python
+        >>> animal = "hérisson"
+        >>> print("Mon animal préféré est le " + animal)
+        Mon animal préféré est le hérisson
+        ```
+
+        #### maths
+
+        ```python
+        >>> y = 10
+        >>> x * y
+        ```
+
+        Selon vous, quelle sera la valeur de `x * y`? <span class="delayed">`50`</span>
+
+        Pourquoi?<!-- .element: class="delayed" -->
+
+        Vous avez modifié <!-- .element: class="delayed" -->`y`, mais l'ancienne valeur de `x` reste dans la mémoire.
+        Le Python se souvient des noms de variable jusqu'à ce que vous fermieze PyCharm ou [les effaciez manuellement](https://docs.python.org/2/tutorial/datastructures.html#the-del-statement).
+      </script>
+    </section>
+
+    <section class="slide list-font-default" data-markdown>
+      <script type="text/template">
+        ## Qu'est-ce qu'un nom?
+
+        Voici quelques conseils et meilleures pratiques pour créer des noms de variable :
+
+        * Les noms de variable ne peuvent comprendre que des lettres, des nombres et le trait de soulignement (`_`).
+          * Pas d'espaces!
+        * Séparez les mots avec un trait de soulignement `_`.
+          * `femmes_en_programmation`
+        * Les noms de variable ne peuvent pas commencer par un nombre.
+          * `1jour` renvoie une erreur, mais `jour1` fonctionne parfaitement.
+        * Idéalement, les noms de variable devraient décrire les données qui sont stockées.
+          *  `animal = "python"` est plus évocateur que `a = "python"`.
+          * `animal = "python"` est mieux que `chose = "python"`.
+      </script>
+    </section>
+
+<!-- -------------------- -->
+<!-- Expressions conditionnelles et booléennes -->
+<!-- -------------------- -->
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Expressions conditionnelles et logique
+
+    Chaque matin, vous vérifiez les prévisions météo pour choisir les vêtements que vous porterez pendant la journée.
+
+    ![On s'habille!](framework/img/workshop/weather.gif) <!-- .element: style="width: 25%" -->
+
+
+    * Est-ce qu'il fait froid dehors? Porter un coton ouaté.
+    * Est-ce qu'il pleut? Apporter un parapluie.
+
+    Lorsque vous faites ceci, vous évaluez une **condition** (la météo) selon des valeurs (vrai ou faux) et vous prenez une décision (ce que vous porterez ou apporterez à l'extérieur).
+    Le Python aussi peut faire cela.
+
+
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Valeurs booléennes
+
+    Les langages de programmation comprennent des valeurs **booléennes**, `True` et `False`.
+
+    Elles sont le résultat de l'évaluation d'une condition.
+    ### Exemple
+    Est-ce qu'il neige? La réponse est soit `True` ou `False`.
+
+    Essayez ceci dans la console. Créez une variable qui s'appelle `météo`.
+    ```python
+    >>> météo = "neige"
+    ```
+
+    Maintenant, essayez-la avec d'autres valeurs de météo.
+
+    Les deux symboles égal (`==`) vérifient si la valeur à droite correspond à la valeur stockée dans la variable.
+
+    ```
+    >>> météo == "froid"
+    False
+    >>> météo == "neige"
+    True
+    >>> météo == "Neige"
+    False
+    ```
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Opérateurs de comparaison
+
+    Dans l'exemple précédent, nous avons utilisé ` == ` pour comparer des chaînes. La question qui tue : comment comparer des nombres?
+
+    ### Les opérateurs de comparaison
+        `x == y` : est-ce que x et y ont égaux
+        `x > y` : est-ce que x est plus grand que y
+
+        `x < y` : est-ce que x est plus petit que y
+
+        `x >= y` : est-ce que x est plus grand ou égal à y
+
+        `x <= y` : est-ce que x est plus petit ou égal à y
+
+    Essayez ceci dans la console :
+
+    ```python
+    >>> x = 4
+    >>> y = 10
+    >>> x < y
+    True
+    >>> x > y
+    False
+    ```
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Expressions conditionnelles et logique (suite)
+
+    Les expressions « si » (`if`) servent à exécuter différents ensembles d'instructions selon le résultat d'un test sur des conditions satisfaites.
+
+    Chaque expression `if` est un test. Le bloc indenté (espacé) est le code qui exécute le test et détermine si le résultat est vrai.
+
+    ```python
+    météo = "neige"
+    if météo == "neige":
+       print("Porter un pantalon de neige")
+    ```
+    Vous pouvez vérifier plus d'un bloc `if` en ajoutant un `elif` au code.
+
+    Le bloc `else` s'exécutera si aucun autre bloc n'est vrai.
+    ```python
+    météo = "neige"
+    if météo == "neige":
+      print("Porter un pantalon de neige")
+    elif météo == "pluie":
+      print("Apporter un parapluie")
+    else:
+      print("Qui sait?")
+
+    ```
+
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Indentation
+
+    Dans le code Python, l'indentation est importante.
+
+    Ce code ne fonctionnera pas :
+    ```python
+      météo = "neige"
+      if météo == "neige":
+      print("Porter un pantalon de neige")
+
+       ```
+
+
+       Le Python vous retournera une erreur :
+       ```python
+       File "C:/Users/Darcie/Documents/GitHub/llc-python-master-fr/exercices/conseils-météo.py", line 3
+       print("Porter un pantalon de neige")
+         ^
+      IndentationError: expected an indented block
+       ```
+
+
+
+  </script>
+</section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Créer un fichier Python
+
+        La console est parfaite pour s'amuser avec le code.
+        Toutefois, pour créer des programmes complexes, nous écrirons du code dans un fichier `.py`. Créons un fichier Python!
+
+        1. Faites un clic droit (ou appuyez avec deux doigts sur le pavé) sur le dossier **exercices** pour créer un nouveau fichier. Ensuite, sélectionnez **New > Python file**.
+
+          ![Créer un nouveau fichier Python](./framework/img/workshop/new-file.png)
+
+        1. Tapez le nom `conseils-météo.py` dans la fenêtre qui s'affiche.
+
+          ![Nom du nouveau fichier Python](framework/img/workshop/new-python-file_fr.png)
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Exécuter un fichier Python
+
+        Le code dans un fichier **.py** n'est que du texte, jusqu'à ce que vous **l'exécutiez** (run) dans le programme Python.
+
+        1. Pour exécuter le code, cliquez sur la flèche verte.
+
+          ![](framework/img/workshop/pycharm-run_fr.png)
+
+          Vous le trouverez aussi dans le menu sous **View > Tool Windows > Run**.
+
+        1. Le code s'exécutera dans la fenêtre de la console.
+
+          ![Démo de l'exemple hello_world](./framework/img/workshop/pycharm-output_fr.png)
+
+        <br>
+        Vous pouvez exécuter votre programme aussi souvent que vous le souhaitez en répétant les étapes ci-dessus.
+      </script>
+    </section>
+
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Exercice : Conseils météo simples (10 minutes)
+
+    Dans le fichier `conseils_météo.py` :
+
+    * Copiez cet extrait de code dans le fichier et modifiez la valeur pour la météo.
+    * Exécutez-le quelques fois avec des valeurs différentes.
+    * Ajoutez d'autres blocs `elif` avec d'autres conditions météo.
+
+    ```python
+    météo = "neige"
+    if météo == "neige":
+      print("Porter un pantalon de neige")
+    elif météo == "pluie":
+      print("Apporter un parapluie")
+    else:
+      print("Qui sait?")
+
+    ```
+
+
+  </script>
+</section>
+
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Indenter plusieurs éléments
+
+        Pour exécuter plus d'une instruction par élément, les instructions doivent être indentées de la même façon.
+
+        ```python
+        météo = "neige"
+        if météo == "neige":
+          print("Porter un pantalon de neige")
+          print("Porter une tuque")
+        elif météo == "pluie":
+          print("Apporter un parapluie")
+        else:
+          print("Qui sait?")
+
+        ```
+
+        Si l'indentation est mauvaise, vous verrez une erreur :
+
+        ```python
+        météo = "neige"
+        if météo == "neige":
+          print("Porter un pantalon de neige")
+        print("Porter une tuque")
+        elif météo == "pluie":
+          print("Apporter un parapluie")
+        else:
+          print("Qui sait?")
+
+        ```
+
+        ```python
+        File "C:/Users/Darcie/Documents/GitHub/llc-python-master-fr/exercices/conseils-météo.py", line 5
+        elif météo == "pluie":
+           ^
+        SyntaxError: invalid syntax
+        ```
+
+      </script>
+    </section>
+
+
+
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## et / ou
+
+        Parfois, il arrive qu'une seule expression ne suffise pas pour englober toutes les conditions. Vous devrez peut-être combiner différents tests avec les expressions **et** (`and`) et **ou** (`or`) pour déterminer les prochaines étapes à suivre.
+
+        `and` : les deux conditions doivent être vraies
+
+        `or` : au moins une des deux conditions doit être vraie
+
+        ### Exemple
+        Supposons qu'un conseil s'applique à plusieurs situations. Ce bloc indenté s'exécutera dans les deux situations.
+        ```python
+        météo = "neige"
+        if météo == "neige" or météo == 'grésil':
+          print("Porter des bottes")
+
+        ```
+
+
+
+
+      </script>
+    </section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## EXERCICE : Température (15 minutes)
+
+    * Ajoutez une variable appelée `température` à votre programme.
+    * Ajoutez une condition de température à chaque bloc elif, comme :
+     * neige et température sont plus petites que -40
+     * neige et température sont entre -20 et -10
+     * À vous de choisir!
+    * Exécutez le code quelques fois en ajoutant des valeurs différentes.
+
+  </script>
+</section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Truc de pro! Mettez des commentaires
+
+        Les programmeuses utilisent des **commentaires** en guise d'aide-mémoire pour eux-mêmes et pour les autres lorsqu'ils consulteront le code plus tard.
+
+        * Les meilleurs commentaires sont ceux qui ajoutent des informations qui ne sont pas évidentes dans le code.
+        * Lorsque le Python lit un fichier, il ignore tous les commentaires.
+
+        ```
+        # Le Python ignorera tout ce qui se trouve après le symbole #.
+        ```
+
+        ### Miniexercice
+        Ajoutez quelques commentaires à votre programme Python et exécutez-le encore.
+            </script>
+    </section>
+
+  <!-- À faire : créer un graphique pour cette diapositive -->
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Stocker des données
+
+        Les variables nous permettent de stocker une donnée simple.
+
+        Comment fait-on pour stocker des données complexes?
+
+        Nous employons le mot `structures de données` pour parler du stockage de données selon leur apparence.
+
+
+        * Si vous avez des données individuelles  &rightarrow;  `list` (liste) ou `array` (tableau).
+         * Exemple : liste de tâches à accomplir
+        * Si vous avez des valeurs qui ont une relation &rightarrow; `dictionary` (dictionnaire).
+         * Exemple : une liste de présence et une liste de notes à un examen pour une même classe
+        * Si vous avez des données hiérarchiques &rightarrow; `tree` (arbre).
+         * Exemple : un arbre généalogique
+        * Si vous avez des éléments qui doivent être traités en ordre &rightarrow; `queue` (file).
+         * Exemple : des commandes de clients pour un café
+        * ...et plus encore!
+
+
+        Pour obtenir des exemples et en savoir plus : https://www.geeksforgeeks.org/data-structures/
+      </script>
+    </section>
+    <!-- -------------------- -->
+    <!-- Intro aux listes -->
+    <!-- -------------------- -->
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Listes
+
+        Lorsque nous avons des collections d'éléments individuels similaires, nous pouvons les stocker dans une **liste**.
+
+        Pour créer une liste, tapez un nom pour la liste, puis tapez `=` suivi des éléments entre crochets ([]).
+
+        ```python
+        nom_de_la_liste = ['éléments', 'séparés', 'par', 'des', 'virgules']
+        ```
+
+        #### Exemples :
+
+        ```python
+         conditions_météo = ['pluie', 'neige', 'nuages','soleil','brouillard']
+
+         provinces = ['BC', 'AB', 'SK','MB','ON','QC','NL,','NB','NS','PE','YT','NT','NU']
+
+         liste_de_tâches = ['Arroser les plantes','Ranger sa chambre','Acheter des chaussures','Devenir Premier ministre', 'Régler le problème des changements climatiques']
+
+         nombres_premiers = [2,3,5,7,11,13]
+        ```
+
+        Comme pour les variables, nos listes devraient porter des noms évocateurs et descriptifs.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Utiliser des listes
+
+        Il est possible d'accéder à un élément d'une liste à la fois.
+
+        Ils sont **indexés** (comptés) à partir de 0.
+
+        ```python
+        conditions_météo = ['pluie', 'neige', 'nuages','soleil','brouillard']
+        ```
+
+        Essayez ces exemples dans la console Python :
+        ```python
+        >>> conditions_météo[0]
+        >>> conditions_météo[3]
+        >>> conditions_météo[10]
+       ```
+
+
+
+        ```python
+        Traceback (most recent call last):
+           File "<input>", line 1, in <module>
+        IndexError: list index out of range
+          ```
+        Python cannot find `conditions_météo[10]` because it does not exist.
+
+
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Fonctions
+
+        * Les fonctions sont des groupes de code réutilisables.
+        * Nous assignons un nom au groupe de code. Ce nom est le **nom de la fonction**.
+        * Vous pouvez utiliser la fonction en l'appelant par son nom suivi de parenthèses.
+        * Les entrées dans la fonction vont dans les parenthèses.
+
+        * Les fonctions peuvent :
+         * réaliser une tâche sans rien retourner (comme `print()`)
+         * accepter des **entrées** et **retourner** des valeurs (comme des fonctions mathématiques)
+
+        ![Fonctions](./framework/img/workshop/functions.png)
+
+        ### Miniexercice
+        Connaissez-vous des exemples de fonctions dans d'autres logiciels, comme [Excel](https://support.office.com/fr-fr/article/fonctions-excel-par-ordre-alphab%C3%A9tique-b3944572-255d-4efb-bb96-c6d90033e188?omkt=fr-CA&ui=fr-FR&rs=fr-CA&ad=CA)?
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Fonctions pour les listes
+
+        Les fonctions servent à réaliser des tâches au-delà des maths.
+
+        Supposons que nous avons une liste de types de conditions météo.
+        ```python
+         conditions_météo = ['pluie', 'neige', 'nuages','soleil','brouillard']
+        ```
+        Que pourrions-nous faire avec ces données?
+
+        * Ajouter ou retirer des éléments
+        * Les classer par ordre alphabétique
+        * Trouver des éléments en double
+        * Compter le nombre d'éléments
+
+        Le Python offre plusieurs fonctions pratiques pour faciliter ces tâches.
+
+        Plus d'infos : https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Ajouter des éléments à une liste
+
+        Pour ajouter un élément à une liste, utilisez la fonction `append()` (« ajouter ») .
+
+         ```python
+         >>> conditions_météo.append('vent')
+         ```
+
+         ```python
+         >>> print(conditions_météo)
+         ```
+
+         Pour retirer un élément d'une liste, utilisez la fonction `remove()` (« retirer »).
+
+         ```python
+         >>> conditions_météo.remove('soleil')
+         ```
+
+         ```python
+         >>> print(conditions_météo)
+         ```
+
+         Pour compter le nombre d'éléments dans une liste, utilisez la fonction `len()` (abréviation de « length », « longueur »).
+
+         ```python
+         >>> len(conditions_météo)
+         ```
+
+         Ces fonctions sont très pratiques lorsque nous avons des listes qui comptent des centaines d'éléments.
+
+
+      </script>
+    </section>
+
+<!-- -------------------- -->
+<!-- Boucles -->
+<!-- -------------------- -->
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Boucles
+
+          En tant que programmeuses, un des outils les plus puissants que nous avons à notre disposition est la *boucle*. Elle nous permet de dire à l'ordinateur de répéter un ensemble d'instructions de nombreuses fois.
+
+          ![Puissant](framework/img/workshop/power.gif) <!-- .element: width="30%" -->
+
+          Le Python peut lire chaque élément d'une liste en ordre et réaliser une tâche. Ainsi, il lit la liste **en boucle**.
+
+          ### Exemple
+
+        ```python
+        conditions_météo = ['pluie', 'neige', 'nuages','soleil','brouillard']
+        for type_de_météo in conditions_météo:
+            print(type_de_météo)
+        ```
+
+    </script>
+    </section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## EXERCICE : logique et listes (20 minutes)
+
+    Combinons les boucles avec les notions que nous avons apprises sur les expressions conditionnelles.
+
+    * Créez un nouveau fichier dans le dossier exercices appelé `boucles-météo.py`.
+
+    * Créez une liste comprenant chaque type de condition météo.
+
+    * Ajoutez une boucle pour **lire en boucle** chaque type de météo.
+
+    * Ajoutez un bloc if/elif/else à l'intérieur de la boucle pour imprimer (print) une recommandation vestimentaire en fonction du type de condition météo.
+
+    * Vous devriez avoir un énoncé à imprimer pour chaque type de condition météo dans la liste.
+
+    * Bonus : si vous terminez plus tôt, faites une concaténation pour ajouter le type de condition météo au début de l'énoncé print avec le conseil météo (exemple : "neige : Porter un pantalon de neige").
+
+
+  </script>
+</section>
+
+<section class="slide title full-monty">
+  <!-- Référence à Monty Python -->
+  <h1 class="heading-bg"><span>Passons complètement à autre chose.</span></h1>
+
+  <aside>Source : <a href="https://www.flickr.com/photos/nerdcoreblog/13995269592/">flickr.com/photos/nerdcoreblog</a></aside>
+</section>
+
+<!-- -------------------- -->
+<!-- Ouvrir un fichier -->
+<!-- -------------------- -->
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Ouvrir un fichier
+
+    Dans cette section, nous travaillerons avec un sous-ensemble de données tiré de nos données sur les signalements d'ovnis.
+
+    Ouvrez le fichier `sousensemble-ovni.csv` dans un éditeur de texte.
+    Ce fichier est enregistré sous un format servant à stocker des données : un fichier **.csv** (csv pour « comma-separated values », valeurs séparées par une virgule). Vous remarquerez qu'il ressemble à une feuille de calcul.
+
+    Si vous souhaitez travailler avec des données, vous devez dire au Python de lire les données dans un fichier.
+
+    Par contre, un être humain qui souhaite ouvrir et lire un fichier n'a qu'à :
+
+    1. trouver le fichier dans votre système de fichiers;
+    1. ouvrir le fichier;
+    1. lire les données qui s'y trouvent;
+    1. fermer le fichier quand vous avez terminé;
+
+
+  </script>
+</section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Lire le fichier au complet
+
+        En fait, le Python peut faire quelque chose de semblable. Pour obtenir des données d'un fichier :
+
+        1. Dites au Python où trouver le fichier.
+        1. Dites au Python d'ouvrir le fichier.
+        1. Dites au Python la quantité de données à lire (p. ex., toutes les données, une ligne à la fois).
+        1. Dites au Python de fermer le fichier quand il a terminé.
+
+        Ouvrez le fichier appelé `travailler-avec-des-fichiers.py` et exécutez-le.
+
+        ```python
+        fichier_données_ovni = open('sousensemble-ovni.csv', 'r') # Ceci dit au Python d'ouvrir le fichier
+
+        fichier_données_ovni.read()   # Ceci dit au Python de lire toutes les données du fichier
+
+        fichier_données_ovni.close()  # Ceci dit au Python de fermer le fichier
+        ```
+
+        Rien ne s'est passé! Pourquoi?
+        Dites au Python d'afficher les données à l'écran en enveloppant la deuxième commande dans `print()` :
+
+        ```python
+        print(fichier_données_ovni.read())
+        ```
+
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Récapitulons
+
+        Nous venons de...
+
+        Dire au Python d'ouvrir `open()` un fichier appelé **sousensemble-ovni.csv** en mode **lecture** (read) et de nous donner les données :
+
+        ```python
+        open('sousensemble-ovni.csv', 'r')
+        ```
+
+        Stocker le fichier dans une variable afin de l'utiliser avec des fonctions :
+
+        ```python
+        fichier_données_ovni = open('sousensemble-ovni.csv', 'r')
+        ```
+
+        Dire au Python de lire toutes les données du fichier avec la fonction `read()` une fois et d'imprimer (print) dans la console :
+
+        ```python
+        print(fichier_données_ovni.read())
+        ```
+
+        Fermer le fichier avec la fonction `close()` maintenant que nous avons fini :
+
+        ```python
+        fichier_données_ovni.close()
+        ```
+
+        Plus d'infos : https://docs.python.org/3.7/tutorial/inputoutput.html#reading-and-writing-files
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Lire des rangées (ou des cellules) individuelles
+
+        Afin de faire des choses intéressantes avec les données, nous devons pouvoir accéder à chaque rangée ou à des valeurs précises.
+
+        Par exemple, pour compter tous les signalements à Gimli au Manitoba en 2017, nous devons pouvoir :
+
+        1. regarder chaque rangée;
+        1. vérifier si le signalement a été fait en 2017 (dans la colonne « Année »);
+        1. vérifier si le signalement a été fait au Manitoba (dans la colonne « Province »);
+        1. vérifier si le signalement a été fait à Gimli (dans la colonne « Lieu »);
+        1. faire quelque chose avec ces informations.
+
+        Pour travailler efficacement avec ces données, nous avons besoin d'une **structure de données**.
+
+        ![Gimli](framework/img/workshop/gimli.gif)
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Bibliothèques
+
+        Le Python comprend plusieurs **bibliothèques** intégrées pratiques. Les bibliothèques (« library ») sont des collections de code écrit par d'autres personnes.
+
+        Aujourd'hui, nous utiliserons la bibliothèque **csv** pour lire les données dans le fichier et les transformer pour leur donner une structure.
+
+        Il y a d'autres fonctions qui peuvent nous aider à travailler avec les fichiers csv.
+
+        Plus d'infos : https://docs.python.org/3/library/csv.html
+
+        ![](framework/img/workshop/genius-glee.gif)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Utiliser une bibliothèque
+
+        Pour utiliser une bibliothèque, ajoutez un énoncé d'importation (**import**) en haut du fichier .py. Maintenant, vous pouvez utiliser n'importe quelle fonction dans cette bibliothèque.
+
+        ```python
+         import csv
+        ```
+
+        Lorsque vous avez ouvert un fichier csv, la bibliothèque csv :
+
+        1. vous donne un objet spécial appelé un « lecteur » (*reader*) qui peut lire une ligne à la fois;
+        1. convertit chaque ligne du fichier en dictionnaire;
+        1. vous permet enfin de faire quelque chose avec les données.
+
+        Plus d'infos : https://docs.python.org/3/tutorial/modules.html
+      </script>
+    </section>
+
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Lire des données d'un fichier CSV
+
+    Aujourd'hui, nous utiliserons l'outil `DictReader` pour accéder aux valeurs.
+
+    ```python
+    import csv   # importer la bibliothèque `csv`
+    fichier_données_ovni = open('sousensemble-ovni.csv', 'r') # ouvrir le fichier
+    lecteur_dictionnaire_données_ovni = csv.DictReader(fichier_données_ovni) # passer le fichier dans `DictReader`
+   ```
+
+    En utilisant `DictReader()`, nous pouvons demander au Python quelle est la prochaine ligne dans le fichier avec `next()`.
+    Ensuite, nous la stockerons dans une variable et l'imprimerons.
+
+    ```python
+    signalement = next(lecteur_dictionnaire_données_ovni)   # obtenir la prochaine rangée
+    print(signalement)
+   ```
+
+    Qu'est-ce que c'est?
+    ```python
+    OrderedDict([('Année', '2016'), ('Mois', '9'), ('Jour', '16'), ('Lieu', 'Iqaluit'), ('Province', 'NU')])
+       ```
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Dictionnaires
+
+    Le Python a utilisé `DictReader` pour lire une rangée dans le fichier et la transformer en **dictionnaire**, un ensemble *clé: paires de valeurs*.
+
+    En fait, le dictionnaire Python est comme le dictionnaire que nous connaissons :
+     > **[python](https://www.larousse.fr/dictionnaires/francais/python/65366)** : Grand serpent constricteur (boïdé) de la zone intertropicale de l'Ancien Monde.
+
+     La console a imprimé le signalement comme ceci :
+      ```python
+      OrderedDict([('Année', '2016'), ('Mois', '9'), ('Jour', '16'), ('Lieu', 'Iqaluit'), ('Province', 'NU')])
+       ```
+
+    Imaginez-le plutôt comme ça :
+    > **Année**: '2016'
+
+    > **Mois**: '9'
+
+    >  **Jour**: '16'
+
+    > **Lieu** : 'Iqaluit'
+
+    > **Province** : 'NU'
+
+
+    Le Python peut « consulter » chaque valeur dans une rangée comme nous pouvons consulter une page du dictionnaire pour connaître le sens du mot « python ».
+
+    ```python
+     print(signalement['Année'])
+     print(signalement['Lieu'])
+    ```
+  </script>
+</section>
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Plus de données
+
+    Pour consulter plus de rangées, vous pouvez utiliser la fonction `next()` plus d'une fois.
+
+    ```python
+    import csv
+    fichier_données_ovni = open('sousensemble-ovni.csv', 'r')
+    lecteur_dictionnaire_données_ovni = csv.DictReader(fichier_données_ovni)
+
+    signalement = next(lecteur_dictionnaire_données_ovni)
+    print(signalement)
+    signalement = next(lecteur_dictionnaire_données_ovni)
+    print(signalement)
+    signalement = next(lecteur_dictionnaire_données_ovni)
+    print(signalement)
+
+    fichier_données_ovni.close()
+    ```
+  </script>
+</section>
+
+<section class="slide centered" data-markdown>
+  <script type="text/template">
+    ## Ouf... c'est épuisant!
+
+    ![C'est épuisant!](framework/img/workshop/tiring.gif) <!-- .element: style="width: 50%" -->
+
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Les boucles à la rescousse!
+
+    Nous savons déjà comment dire à l'ordinateur de lire en boucle différents éléments pour nous :
+
+    ```python
+    import csv
+
+    fichier_données_ovni = open('sousensemble-ovni.csv', 'r')
+    lecteur_dictionnaire_données_ovni = csv.DictReader(fichier_données_ovni)
+
+    for signalement in lecteur_dictionnaire_données_ovni:
+      print(signalement['Lieu'])
+
+    fichier_données_ovni.close()
+    ```
+
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Utilisez des expressions booléennes
+
+    Utilisez ce que vous connaissez sur les expressions conditionnelles pour vérifier si le signalement est au Manitoba (MB) ou dans votre province.
+
+    ```python
+    import csv
+
+    fichier_données_ovni = open('sousensemble-ovni.csv', 'r')
+    lecteur_dictionnaire_données_ovni = csv.DictReader(fichier_données_ovni)
+
+    for signalement in lecteur_dictionnaire_données_ovni:
+      if signalement['Province'] == 'MB':
+       print(signalement['Lieu'])
+
+    fichier_données_ovni.close()
+    ```
+
+  </script>
+</section>
+
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Ajoutez le signalement à une liste!
+
+    Maintenant que vous avez trouvé un signalement qui vous intéresse, vous pouvez l'enregistrer en l'ajoutant à une liste.
+
+    ```python
+    import csv
+
+    signalements_au_MB = [] # Ceci est une liste vide.
+    fichier_données_ovni = open('sousensemble-ovni.csv', 'r')
+    lecteur_dictionnaire_données_ovni = csv.DictReader(fichier_données_ovni)
+
+    for signalement in lecteur_dictionnaire_données_ovni:
+      if signalement['Province'] == 'MB':
+       signalements_au_MB.append(signalement)
+
+    fichier_données_ovni.close()
+    ```
+
+    Utilisez la fonction `len()` que nous avons vue plus tôt pour imprimer le nombre de signalements dans la liste :
+    ```python
+    print(len(signalements_au_MB))
+    ```
+
+  </script>
+</section>
+
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Voyons grand
+
+    Le temps est venu de passer à un grand ensemble de données.
+
+    Remplacez `fichier_données_ovni = open('sousensemble-ovni.csv', 'r')` par
+
+    `fichier_données_ovni = open('données-ovni.csv', 'r')`
+
+    Ce fichier csv contient plus de 15 000 éléments, mais croyez-le ou non, il s'agit d'un sous-ensemble de l'ensemble de données complet!
+
+    ![Wow](framework/img/workshop/woah.gif) <!-- .element: style="width: 60%" -->
+
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Exercice final : actions plus précises
+
+    Ce que nous pouvons faire en ce moment :
+
+    * Ouvrir un fichier
+    * Lire le contenu du fichier dans un DictReader Python
+    * Convertir chaque ligne en dictionnaire
+    * Vérifier chaque ligne pour voir si le signalement a été fait au Manitoba
+    * Ajouter le signalement à une liste
+
+    Que pouvons-nous faire d'autre?
+
+    * Ajouter plus de critères
+    * Trouver des signalements à Gimli (ou dans une autre ville)
+    * Vérifier le nombre de signalements dans une année précise
+    * D'autres idées?
+
+  </script>
+</section>
+
+<section class="slide" data-markdown>
+  <script type="text/template">
+    ## Retour
+
+    Voici ce que nous avons appris aujourd'hui :
+
+    * Définition de la programmation
+    * Comment écrire et exécuter des programmes en Python
+    * Concepts de programmation de base
+    * Comment travailler avec des fichiers
+    * Comment chercher des données dans un fichier en programmant
+
+
+  </script>
+</section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Ressources
+
+        ### Tutoriels / cours :
+
+        * [Tutoriel Python officiel](http://docs.python.org/2.7/tutorial/)
+        * [Full Stack Python](http://www.fullstackpython.com)
+        * [Udacity - Apprenez le Python orienté objet](http://www.udacity.com/course/programming-foundations-with-python--ud036)
+
+        ### Développement Web avec le Python :
+
+        * [Django](https://www.djangoproject.com/)
+        * [App Hello Web](https://www.hellowebapp.com/)
+        * [Flask](http://flask.pocoo.org/)
+
+        ### Autres ressources :
+
+        * [Raspberry pi](https://www.raspberrypi.org/)
+        * [Connecteur mySQL](http://dev.mysql.com/doc/connector-python/en/)
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+      </br></br> </br>
+      ## Bonne chance!
+        ![Bonne chance!](framework/img/workshop/good-luck.gif) <!-- .element: style="width: 50%" -->
+      </script>
+    </section>
+
+<!-- Dernière diapositive -->
+
+    <section class="slide last">
+      <h2>Merci!</h2>
+
+      <h2 class="heading-bg">
+        <span>Aperçu de données avec le Python</span>
+      </h2>
+      <!-- <h3><span>with</span> Nom de la formatrice</h3>
+
+       <img class="instructor-img" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="nom de la formatrice">
+      <ul>
+        <li><i class="fa fa-envelope"></i><a href="mailto:">allo@courriel.com</a></li>
+        <li><i class="fa fa-desktop"></i><a href="#">monsite.com</a></li>
+        <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
+      </ul>
+ -->
+      <p class="attribution">Diapositives créées à partir du <a href="https://github.com/LeaVerou/csss">système de diapositives basé sur le CSS de Lea Verou</a> et de <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+    </section>
+
+  </main><!-- Section principale cls -->
+
+  <footer>
+    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" src="framework/img/cc-by-nc.svg" /></a> par <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Femmes en programmation</a></p>
+    <p class="instructions">Utilisez les flèches gauche <i class="fa fa-arrow-left"></i> et droite <i class="fa fa-arrow-right"></i> pour naviguer.</p>
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Enlevez les commentaires des modules dont vous avez besoin -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <!-- <script src="framework/scripts/plugins/highlight/highlight.js"></script> -->
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    var slideshow = new SlideShow();
+
+    // Regroupe tous les éléments .snippet
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+
+    // Ajoute une zone de code modifiable « Modifiez-moi »
+    jQuery(document).ready(function(){
+      jQuery(".snippet").before("<span class=\"edit\">Modifiez-moi</span>");
+    });
+  </script>
+</body>
+</html>

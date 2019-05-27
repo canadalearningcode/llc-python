@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Femmes en programmation</title>
+  <!-- Ne modifiez pas : slideshow.css, les diapositives CSS ont besoin de ce fichier pour fonctionner
+  https://github.com/LeaVerou/csss -->
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+
+  <!-- Styles propres au thème -->
+  <!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CQuicksand%7CPacifico%7COpen+Sans:400italic,400,300' rel='stylesheet' type='text/css' data-noprefix> -->
+  <link rel="stylesheet" href="framework/css/font-awesome.min.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs-themes/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/theme-llc.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Stypes propres à l'atelier -->
+  <link rel="stylesheet" href="framework/css/workshop.css" data-noprefix>
+
+  <!-- S'occupe des préfixes CSS3 -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+
+  <!-- Ouvre tous les liens dans une nouvelle fenêtrew -->
+  <base target="_blank">
+</head>
+
+<!-- Barre de progression / durée : définissez la durée de la présentation avec « data-duration » en minutes. -->
+<body class="en" data-duration="360">
+
+
+
+  <main>
+
+  <section class="slide" data-toc data-markdown>
+    <script type="text/template">
+      ##Notes pour la formatrice
+
+      ##Femmes en programmation : aperçu de données avec le Python
+
+      <br>
+      ##Conseils pour les formatrices
+
+      ###Pour la réunion avec les mentores :
+
+      * Certaines utilisatrices de Mac pourraient avoir de la difficulté à configurer PyCharm avec Python 3. Avant le début de l'atelier, conseillez aux mentores de régler les problèmes individuellement plutôt que d'expliquer les différences entre Python 2 et Python 3 au groupe en entier.
+      * Évitez de vous lancer dans des discussions trop poussées sur le sujet, particulièrement dans les sections sur les structures de données. Expliquez ceci aux mentores durant vos réunions.
+      * Dites aux mentores de ne pas faire des suggestions ou de donner des rétroactions sur le contenu pendant l'atelier. Elles pourront vous donner des commentaires durant la pause.
+
+      ### Pour la présentation des mentores :
+
+      * Encouragez les mentores à partager leurs propres utilisations du Python ou créations avec ce langage (p. ex., applications au travail, projets durant leurs temps libres).
+      * Si vous le souhaitez, partagez des informations sur des groupes d'utilisateurs du Python ou des rencontres d'intérêt dans la région.
+
+      ### Notes sur le contenu :
+
+      * Lorsque vous parlerez de PyCharm et des environnements IDE, présentez l'outil au groupe. Montrez aux apprenantes comment afficher ou masquer des fenêtres, où se trouvent les onglets de fichiers, comment utiliser l'explorateur de projet, etc. Prenez votre temps en expliquant ces notions.
+      * Fermez des fichiers Python et répétez la procédure de création d'un nouveau fichier Python plusieurs fois avant de sauvegarder. Mettez l'accent sur le fait que le fichier doit se trouver au bon endroit.
+      * Configurez la taille de la police dans PyCharm avant l'atelier. Remarque : Ctrl + zoom ne fonctionne pas dans PyCharm : les paramètres se trouvent sous File > Settings > Editor > Font. Augmentez la taille de la police à 16 (minimum).
+      * Il arrive que la flèche verte « Run » ne s'affiche plus dans PyCharm. Le code dans le fichier .py n'est donc peut-être pas valide. Les apprenantes peuvent aussi faire un clic droit sur l'onglet et exécuter le fichier de cette façon.
+      * N'hésitez pas à inclure vos propres exemples, particulièrement dans les sections sur les structures de données et les fonctions. Nous avons ajouté quelques liens sur ces diapositives que vous pouvez consulter à votre guise.
+      * Les sections de code précédées par `>>>` doivent être exécutées dans la console.
+      * Le code indenté devrait être exécuté dans les fichiers .py.
+      * Si vous manquez de temps, vous pouvez réaliser les exercices individuels en grand groupe. Ne vous dépêchez pas à finir les diapositives et à aborder tout le contenu; allez-y au rythme du groupe.
+
+      ### Minutage :
+      * Il y a des durées conseillées dans les exercices individuels.
+      * Essayez d'aborder les notions sur les listes et les boucles avant la pause du dîner.
+
+
+    </script>
+  </section>
+
+</main><!-- Section principale cls -->
+
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="framework/scripts/slideshow.js"></script>
+
+    <!-- Enleves les commentaires des modules dont vous avez besoin -->
+    <script src="framework/scripts/plugins/css-edit.js"></script>
+    <script src="framework/scripts/plugins/css-snippets.js"></script>
+    <script src="framework/scripts/plugins/css-controls.js"></script>
+    <!-- <script src="plugins/code-highlight.js"></script>-->
+
+    <script src="framework/scripts/plugins/markdown/marked.js"></script>
+    <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+    <!-- <script src="framework/scripts/plugins/highlight/highlight.js"></script> -->
+    <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script>
+      var slideshow = new SlideShow();
+
+      // Regroupe tous les éléments .snippet
+      var snippets = document.querySelectorAll('.snippet');
+      for(var i=0; i<snippets.length; i++) {
+        new CSSSnippet(snippets[i]);
+      }
+
+      // Ajoute des zones de code modifiables « Modifiez-moi »
+      jQuery(document).ready(function(){
+        jQuery(".snippet").before("<span class=\"edit\">Modifiez-moi</span>");
+      });
+    </script>
+  </body>
+  </html>
