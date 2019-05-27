@@ -3,21 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Femmes en programmation</title>
-  <!-- Ne modifiez pas slideshow.css : les diapositives CSS en ont besoin pour fonctionner.
-  https://github.com/LeaVerou/csss -->
+  <title>Femmes en Programmation</title>
   <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
-
-  <!-- Styles propres au thème -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CQuicksand%7CPacifico%7COpen+Sans:400italic,400,300' rel='stylesheet' type='text/css' data-noprefix> -->
-  <link rel="stylesheet" href="framework/css/font-awesome.min.css" data-noprefix>
   <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
-  <link rel="stylesheet" href="framework/css/highlightjs-themes/github.css" data-noprefix>
-  <link rel="stylesheet" href="framework/css/theme-llc.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
   <link rel="shortcut icon" href="framework/img/favicon.ico">
-
-  <!-- Styles propres à l'atelier  -->
-  <link rel="stylesheet" href="framework/css/workshop.css" data-noprefix>
 
   <!-- S'occupe des préfixes CSS3 -->
   <script src="framework/scripts/prefixfree.min.js"></script>
@@ -26,59 +17,66 @@
   <base target="_blank">
 </head>
 
-<!-- Barre de progression / durée : définissez la durée de la présentation avec « data-duration » en minutes. -->
+<!-- Barre de progression : définissez la durée de la présentation en minutes avec « data-duration ». -->
 <body class="en" data-duration="360">
 
-  <!-- Diapositive d'intro -->
-  <header class="slide">
-    <img class="logo" src="framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
-    <h1>Bienvenue chez Femmes en programmation!</h1>
-
-    <div class="instructions">
-      <!-- Ajoutez les informations sur le Wi-Fi -->
-      <h2>Connexion</h2>
-      <p>Réseau : <br>
-      Mot de passe : </p>
-
-      <hr>
-
-      <h2>Téléchargez <br> et installez</h2>
-      <p>Fichiers d'apprentissage (dossier zip) : <a href="https://github.com/ladieslearningcode/llc-python/archive/master.zip">http://bit.ly/llc-python3</a></p>
-      <p>Consignes d'installation, selon le système :</p>
-      <ul>
-        <li><a href="installation/windows.html">Windows</a></li>
-        <li><a href="installation/mac.html">Mac</a></li>
-      </ul>
-    </div>
-    <!--<div class="sponsor">
-      <p>En partenariat avec
-      <img src="framework/img/telus-logo-white.svg" alt="Logo de Telus"></p>
-    </div>-->
-  </header>
-
   <main>
-    <!-- Informations sur la formatrice -->
-    <section class="slide intro">
-      <img class="logo" src="framework/img/logo-llc-white.png" alt="Logo de Femmes en programmation">
-      <div class="info">
-        <br>
-        <h1 class="heading-bg">
-          <span>Aperçu de données avec le Python</span>
-        </h1>
-        <!-- À FAIRE : Remplir les informations sur la formatrice -->
-      <!--   <h2><span>avec</span> Nom de la formatrice</h2>
 
-      <img class="instructor-img" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="Nom de la formatricee">
-      <ul>
-        <li><i class="fa fa-envelope"></i><a href="mailto:">allo@courriel.com</a></li>
-        <li><i class="fa fa-desktop"></i><a href="#">monsite.com</a></li>
-        <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
-      </ul> -->
-        <!--<div class="sponsor">
-          <p>En partenariat avec</p>
-          <img src="framework/img/telus-logo-white.svg" alt="Logo de Telus">
-        </div>-->
+    <section class="slide welcome highlight">
+      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Bienvenue!</h1>
+
+      <div class="instructions">
+        <!-- AJOUTEZ LES INFORMATIONS SUR LE WI-FI ICI -->
+        <h2>Branchez-<br>vous</h2>
+        <p><strong>Wi-Fi :</strong> nom du réseau Wi-Fi</p>
+        <p><strong>Mot de passe :</strong> mot de passe du Wi-Fi</p>
+        <hr>
+
+        <h2>Téléchargez<br> et installez</h2>
+        <ol class="downloads">
+          <li>Fichiers d'apprentissage (dossier zip) : <a href="https://github.com/ladieslearningcode/llc-python/archive/master.zip">http://bit.ly/llc-python3</a></p>
+            <ul>
+              <li>dézippez le dossier d'apprentissage (<em>Tout extraire</em> sur un PC)</li>
+              <li>ouvrez <em>slides-en.html</em> dans le navigateur pour voir les diapositives</li>
+            </ul>
+          </li>
+          <li>Consignes d'installation, selon le système :</li>
+          <ul>
+            <li><a href="installation/windows.html">Windows</a></li>
+            <li><a href="installation/mac.html">Mac</a></li>
+          </ul>
+        </ol>
       </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Contenu créé par Darcie Milliken pour <a prefix="cc: http://creativecommons.org/ns#" href="http://canadalearningcode.ca" property="cc:attributionName" rel="cc:attributionURL">Canada Learning Code</a></p>
+        <p class="right">Utilisez les flèches gauche <span class="arrow">&#8592;</span> et droite  <span class="arrow">&#8594;</span> de votre clavier pour naviguer les diapositives...</p>
+      </footer>
+    </section>
+
+    <section class="slide intro">
+      <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
+      <h1 class="heading-bg">
+        <span>Aperçu de données avec le Python</span>
+      </h1>
+
+      <!-- ENTREZ LES INFORMATIONS SUR LA FORMATRICE -->
+<!--      <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
+      <h2><span class="cursive">avec</span> Nom de la formatrice</h2>
+      <ul>
+        <li><a href="mailto:">allo@email.com</a></li>
+        <li><a href="http://website.com">monsite.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul>
+
+      <div class="sponsor">
+        <p>En partenariat avec<br><img src="framework/img/telus-logo-white.svg" alt="Telus"><br><img src="framework/img/logo-accenture.svg" alt="Accenture"></p>
+      </div>-->
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Contenu créé par Darcie Milliken pour <a prefix="cc: http://creativecommons.org/ns#" href="http://canadalearningcode.ca" property="cc:attributionName" rel="cc:attributionURL">Canada Learning Code</a></p>
+        <p class="right">Utilisez les flèches gauche <span class="arrow">&#8592;</span> et droite  <span class="arrow">&#8594;</span> de votre clavier pour naviguer</p>
+      </footer>
     </section>
 
     <section class="slide project" data-markdown>
@@ -1005,26 +1003,26 @@
     Combinons les boucles avec les notions que nous avons apprises sur les expressions conditionnelles.
 
     * Créez un nouveau fichier dans le dossier exercices appelé `boucles-météo.py`.
-
     * Créez une liste comprenant chaque type de condition météo.
-
     * Ajoutez une boucle pour **lire en boucle** chaque type de météo.
-
     * Ajoutez un bloc if/elif/else à l'intérieur de la boucle pour imprimer (print) une recommandation vestimentaire en fonction du type de condition météo.
-
     * Vous devriez avoir un énoncé à imprimer pour chaque type de condition météo dans la liste.
-
     * Bonus : si vous terminez plus tôt, faites une concaténation pour ajouter le type de condition météo au début de l'énoncé print avec le conseil météo (exemple : "neige : Porter un pantalon de neige").
 
 
   </script>
 </section>
 
-<section class="slide title full-monty">
+<section class="slide centered" data-markdown>
+  <script type="text/template">
   <!-- Référence à Monty Python -->
-  <h1 class="heading-bg"><span>Passons complètement à autre chose.</span></h1>
+  # Passons complètement à autre chose
+
+  ![Monty Python](framework/img/workshop/monty-python.jpg)
 
   <aside>Source : <a href="https://www.flickr.com/photos/nerdcoreblog/13995269592/">flickr.com/photos/nerdcoreblog</a></aside>
+
+  </script>
 </section>
 
 <!-- -------------------- -->
@@ -1425,67 +1423,55 @@
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
-      </br></br> </br>
-      ## Bonne chance!
+        ## Bonne chance!
+
         ![Bonne chance!](framework/img/workshop/good-luck.gif) <!-- .element: style="width: 50%" -->
       </script>
     </section>
 
 <!-- Dernière diapositive -->
+<!-- Dernière diapositive -->
+  <section class="slide last">
+    <h1>Merci!</h1>
+    <h2 class="heading-bg">
+      <span>Aperçu de données avec le Python<br></span>
+    </h2>
 
-    <section class="slide last">
-      <h2>Merci!</h2>
+    <img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
+    <h2><span class="cursive">avec</span> nom de la formatrice</h2>
+    <ul>
+      <li><a href="mailto:">allo@courriel.com</a></li>
+      <li><a href="#">monsite.com</a></li>
+      <li><a href="http://twitter.com/">@twitter</a></li>
+    </ul>
 
-      <h2 class="heading-bg">
-        <span>Aperçu de données avec le Python</span>
-      </h2>
-      <!-- <h3><span>with</span> Nom de la formatrice</h3>
+    <p class="attribution">Diapositives créées par <a href="http://christinatruong.com">Christina Truong</a> à partir de <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> et de <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+  </section>
 
-       <img class="instructor-img" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="nom de la formatrice">
-      <ul>
-        <li><i class="fa fa-envelope"></i><a href="mailto:">allo@courriel.com</a></li>
-        <li><i class="fa fa-desktop"></i><a href="#">monsite.com</a></li>
-        <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
-      </ul>
- -->
-      <p class="attribution">Diapositives créées à partir du <a href="https://github.com/LeaVerou/csss">système de diapositives basé sur le CSS de Lea Verou</a> et de <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
-    </section>
+</main><!-- Section principale cls -->
 
-  </main><!-- Section principale cls -->
+<script src="framework/scripts/jquery-1.11.0.min.js"></script>
+<script src="framework/scripts/slideshow.js"></script>
 
-  <footer>
-    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" src="framework/img/cc-by-nc.svg" /></a> par <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Femmes en programmation</a></p>
-    <p class="instructions">Utilisez les flèches gauche <i class="fa fa-arrow-left"></i> et droite <i class="fa fa-arrow-right"></i> pour naviguer.</p>
-  </footer>
+<!-- Enlevez les commentaires des modules dont vous avez besoin -->
+<script src="framework/scripts/plugins/css-edit.js"></script>
+<script src="framework/scripts/plugins/css-snippets.js"></script>
+<script src="framework/scripts/plugins/css-controls.js"></script>
+<!-- <script src="plugins/code-highlight.js"></script>-->
 
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="framework/scripts/slideshow.js"></script>
+<script src="framework/scripts/plugins/markdown/marked.js"></script>
+<script src="framework/scripts/plugins/markdown/markdown.js"></script>
+<script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="framework/scripts/llc.js"></script>
+<script>
+  var slideshow = new SlideShow();
 
-  <!-- Enlevez les commentaires des modules dont vous avez besoin -->
-  <script src="framework/scripts/plugins/css-edit.js"></script>
-  <script src="framework/scripts/plugins/css-snippets.js"></script>
-  <script src="framework/scripts/plugins/css-controls.js"></script>
-  <!-- <script src="plugins/code-highlight.js"></script>-->
-
-  <script src="framework/scripts/plugins/markdown/marked.js"></script>
-  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
-  <!-- <script src="framework/scripts/plugins/highlight/highlight.js"></script> -->
-  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-
-  <script>
-    var slideshow = new SlideShow();
-
-    // Regroupe tous les éléments .snippet
-    var snippets = document.querySelectorAll('.snippet');
-    for(var i=0; i<snippets.length; i++) {
-      new CSSSnippet(snippets[i]);
-    }
-
-    // Ajoute une zone de code modifiable « Modifiez-moi »
-    jQuery(document).ready(function(){
-      jQuery(".snippet").before("<span class=\"edit\">Modifiez-moi</span>");
-    });
-  </script>
+  // Regroupe tous les éléments .snippet
+  var snippets = document.querySelectorAll('.snippet');
+  for(var i=0; i<snippets.length; i++) {
+    new CSSSnippet(snippets[i]);
+  }
+</script>
 </body>
 </html>
