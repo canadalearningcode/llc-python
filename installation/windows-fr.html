@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Femmes en programmation</title>
+  <link rel="stylesheet" href="../framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="../framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="../framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="../framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="../framework/img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="../framework/scripts/prefixfree.min.js"></script>
+
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+
+<body class="en" data-duration="360">
+
+  <main>
+
+  <section class="slide" data-toc data-markdown>
+    <script type="text/template">
+      <h1>Installation de Python : Windows</h1>
+
+        <ol>
+          <li>Téléchargez les fichiers d'apprentissage (dossier zip).</li>
+          <li>Dézippez le dossier (« Extraire tout »).</li>
+          <li>Installez la dernière version de Python 3.x : <a href="https://www.python.org/downloads">https://www.python.org/downloads</a>.
+            <br/>
+            <img src="windows-install-1.png" >
+          </li>
+          <li>Installez Pycharm Educational Edition : <a href="https://www.jetbrains.com/pycharm-educational">https://www.jetbrains.com/pycharm-educational</a>.
+            <br/>
+            <img src="windows-install-2.png" >
+          </li>
+          <li>Exécutez Pycharm et ouvrez le dossier de projet que vous venez d'extraire.
+              <br/>
+            <img src="windows-install-3.png" >
+          </li>
+          <li>
+            En bas à gauche, cliquez sur « Python Console ». Attendez une minute, et le numéro de la version devrait s'afficher.
+            <br/>
+            <img src="windows-install-4.png" >
+            <br/>
+            <img src="windows-install-5.png" >
+          </li>
+          <li>C'est tout!</li>
+        </ol>
+
+  </script>
+</section>
+
+</main><!-- cls main section -->
+
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="../framework/scripts/plugins/css-edit.js"></script>
+  <script src="../framework/scripts/plugins/css-snippets.js"></script>
+  <script src="../framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="../framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="../framework/scripts/plugins/markdown/markdown.js"></script>
+  <!-- <script src="../framework/scripts/plugins/highlight/highlight.js"></script> -->
+  <script src="../framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+
+    // Adds "edit me" note to editable code areas
+    jQuery(document).ready(function(){
+      jQuery(".snippet").before("<span class=\"edit\">edit me</span>");
+    });
+  </script>
+</body>
+</html>
