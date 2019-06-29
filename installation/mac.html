@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Ladies Learning Code</title>
-  <!-- Don't alter slideshow.css, CSSS slide deck needs it to work
-  https://github.com/LeaVerou/csss -->
-  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
-
-  <!-- Theme-specific styles -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CQuicksand%7CPacifico%7COpen+Sans:400italic,400,300' rel='stylesheet' type='text/css' data-noprefix> -->
-  <link rel="stylesheet" href="../framework/css/font-awesome.min.css" data-noprefix>
+  <link rel="stylesheet" href="../framework/css/slideshow.css" data-noprefix>
   <link rel="stylesheet" href="../framework/css/fonts.css" data-noprefix>
-  <link rel="stylesheet" href="../framework/css/highlightjs-themes/github.css" data-noprefix>
-  <link rel="stylesheet" href="../framework/css/theme-llc.css" data-noprefix>
+  <link rel="stylesheet" href="../framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="../framework/css/styles.css" data-noprefix>
   <link rel="shortcut icon" href="../framework/img/favicon.ico">
 
-  <!-- Workshop-specific styles -->
-  <link rel="stylesheet" href="../framework/css/workshop.css" data-noprefix>
-
-  <!-- Takes care of CSS3 prefixes! -->
+  <!-- Takes care of CSS3 prefixes -->
   <script src="../framework/scripts/prefixfree.min.js"></script>
 
   <!-- opens all links in a new window -->
@@ -27,12 +19,15 @@
 </head>
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
-<body class="en" data-duration="360">
-  <header class="slide">
-    <img class="logo" src="../framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
-    <h1>Python Installation: Mac</h1>
 
-    <div class="instructions">
+<body class="en" data-duration="360">
+
+  <main>
+
+  <section class="slide" data-toc data-markdown>
+    <script type="text/template">
+      <h1>Python Installation: Mac</h1>
+
       <ol>
         <li>Download the learner files (zip) </li>
         <li>Extract the zip</li>
@@ -49,15 +44,15 @@
                 </li>
                 <li>
                     Select the project and then Project Interpreter
-                    <br/><img src="mac-install-2.png" > 
+                    <br/><img src="mac-install-2.png" >
                 </li>
                 <li>
                     Depending on your setup you may or may not have a Project Interpreter selected from the drop down menu.
-                    <br/><img src="mac-install-3.png" > 
+                    <br/><img src="mac-install-3.png" >
                 </li>
                 <li>
                     Beside the drop down is a little cog which you can select and click add
-                    <br/><img src="mac-install-4.png" > 
+                    <br/><img src="mac-install-4.png" >
                 </li>
                 <li>
                     Another dialog should pop up now called Add Python Interpreter
@@ -77,12 +72,17 @@
                     <br/><img src="mac-install-9.png" >
                 </li>
             </ul>
-           
+
         </li>
         <li>You're good to go!</li>
       </ol>
 
-  </header>
+
+  </script>
+</section>
+
+</main><!-- cls main section -->
+
 
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="../framework/scripts/slideshow.js"></script>
@@ -95,7 +95,7 @@
 
   <script src="../framework/scripts/plugins/markdown/marked.js"></script>
   <script src="../framework/scripts/plugins/markdown/markdown.js"></script>
-  <!-- <script src="framework/scripts/plugins/highlight/highlight.js"></script> -->
+  <!-- <script src="../framework/scripts/plugins/highlight/highlight.js"></script> -->
   <script src="../framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
